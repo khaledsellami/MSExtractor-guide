@@ -27,9 +27,9 @@
     <li>
       <a href="#usage">Usage</a>
       <ul>
-        <li><a href="#server">Starting the server</a></li>
-        <li><a href="#cli">Using the MSExtractor CLI</a></li>
-        <li><a href="#cli">Using a third-party analysis tool</a></li>
+        <li><a href="#starting-the-server">Starting the server</a></li>
+        <li><a href="#using-the-msextractor-cli">Using the MSExtractor CLI</a></li>
+        <li><a href="#using-a-third-party-analysis-tool">Using a third-party analysis tool</a></li>
       </ul>
     </li>
     <li><a href="#license">License</a></li>
