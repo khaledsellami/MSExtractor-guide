@@ -1,0 +1,26 @@
+name: decomp
+services:
+  msextractor:
+    image: dcalsel/msextractor:latest
+    environment:
+      SERVICE_PARSING: parsing
+      SERVICE_PARSING_PORT: 50500
+      SERVICE_MSEXTRACTOR: msextractor
+      SERVICE_MSEXTRACTOR_PORT: 50060
+    depends_on:
+      - parsing
+    ports:
+      - "50060:50060"
+  parsing:
+    image: dcalsel/decomp-parsing-service:latest
+    environment:
+      SERVICE_JAVA_ANALYSIS: java-analysis
+      SERVICE_JAVA_ANALYSIS_PORT: 50100
+    depends_on:
+      - java-analysis
+    ports:
+      - "50500:50500"
+  java-analysis:
+    image: dcalsel/decomp-java-analysis-service:latest
+    ports:
+      - "50100:50100"
